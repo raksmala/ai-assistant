@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask GPT with TTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #input-area {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #question {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #tts-method {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #submit {
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        #submit:hover {
+            background-color: #3f51b5;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            background: #e8eaf6;
+            width: 300px;
+            text-align: left;
+        }
+
+        @media (max-width: 500px) {
+            #input-area, #response {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ask GPT with TTS</h1>
+    <div id="input-area">
+        <input type="text" id="question" placeholder="Type your question here..." />
+        <select id="tts-method">
+            <option value="speechSynthesis">Web Speech API</option>
+            <option value="openaiTTS">OpenAI TTS</option>
+        </select>
+        <button id="submit">Ask</button>
+    </div>
+    <div id="response"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
